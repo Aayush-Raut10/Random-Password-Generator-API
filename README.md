@@ -92,12 +92,12 @@ http://127.0.0.1:8000/docs
 ## Output Screenshots
 
 ### Generate random password:
-![API Output](<assets\screenshots\outputscreenshot1.png>)
+![API Output](<assets/screenshots/outputscreenshot1.png>)
 
 ### Check the password strength:
-![API Output](<assets\screenshots\Screenshot 2026-03-23 223118.png>)
+![API Output](<assets/screenshots/Screenshot 2026-03-23 223118.png>)
 
-![API Output](<assets\screenshots\outputscreenshot3.png>)
+![API Output](<assets/screenshots/outputscreenshot3.png>)
 ## License
 
 This project is licensed under the MIT License.
