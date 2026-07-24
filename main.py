@@ -3,8 +3,14 @@ import string
 import random
 SPECIAL_SYMBOLS = string.punctuation
 
+import logfire
+
+logfire.configure()
 
 app = FastAPI()
+
+logfire.instrument_fastapi(app)
+
 
 
 @app.get("/generate_password")
