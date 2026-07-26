@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, status
 import string
 import random
 SPECIAL_SYMBOLS = string.punctuation
@@ -17,10 +17,16 @@ logfire.instrument_fastapi(app)
 def generate_password(length:int = 8):
 
     if length <= 0:
-        return {"message":"Password length can't be negative or zero !"}
-    
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, 
+            detail="Password length can't be negative or zero!"
+        )
+       
     if length > 500:
-        return {"message":"Password length can't be more than 500 !"}
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Password length can't be more than 500!"
+        )
     
     alphabets = string.ascii_letters
     numbers = string.digits
